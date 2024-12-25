@@ -1,11 +1,10 @@
 in_number=int(input("please enter your number:   "))
-def fobin_num(inde):
-    if inde==0 : 
-        return 0
-    elif inde ==1 or inde==2 : 
-        return 1
-    else : 
-        return fobin_num(inde-1)+fobin_num(inde-2)
-
-for i in range(in_number):
-    print(fobin_num(i))
+if in_number>0:
+    fibo=[0]*in_number
+    fibo[1]=1
+    print(fibo[0])
+    print(fibo[1])
+    for i in range(2,in_number):
+       fibo[i]=fibo[i-1]+fibo[i-2]
+       print(fibo[i])
+else: print("please enter valid count")
